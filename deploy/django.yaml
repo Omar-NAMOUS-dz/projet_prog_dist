@@ -54,8 +54,7 @@ spec:
             claimName: django-app-pvc
       containers:
 
-        - image: django-app:latest
-          imagePullPolicy: Never
+        - image: omarnms/django-app:latest
           name: app
           ports:
             - containerPort: 8080
@@ -83,8 +82,7 @@ spec:
                   name: django
                   key: secret
 
-        - image: django-proxy:latest
-          imagePullPolicy: Never
+        - image: omarnms/django-proxy:latest
           name: proxy
           ports:
             - containerPort: 8000
